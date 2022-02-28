@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { logout } from "../actions/session_actions";
 
 
 class DashHeader extends React.Component {
@@ -16,11 +18,14 @@ class DashHeader extends React.Component {
         return (
             <div className="header">
                 <h3>AVARTS</h3>
-                <Link to='/login' className="login">Login</Link>
                 <button onClick={this.handleLogout}>Logout</button>
             </div>
         )
     }
 }
 
-export default DashHeader;
+const mDTP = dispatch => ({
+    logout: () => dispatch(logout())
+})
+
+export default connect(null, mDTP)(DashHeader);

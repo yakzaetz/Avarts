@@ -1,32 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { logout } from "../../actions/session_actions"
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux"
+
 
 
 class AuthHeader extends React.Component{
     constructor(props){
         super(props)
-        this.handleLogout = this.handleLogout.bind(this)
     }
 
-    handleLogout(e) {
-        e.preventDefault();
-        this.props.logout();
-    }
+    
 
     render(){
-        return(
-            <div className="header">
-                <Link to='/' className="logo"><h3>AVARTS</h3></Link>
-                <Link to='/login' className="login">Login</Link>
-                <button onClick={this.handleLogout}>Logout</button>
-            </div>
-        )}
+        const wantedPaths = ['/', '/signup', '/login']
+        if (wantedPaths.includes(this.props.location.pathname)){
+            return(
+                <div className="header">
+                    <Link to='/' className="logo"><h2>AVARTS</h2></Link>
+                    {this.props.location.pathname !== '/login' ? <button><Link to='/login' className="login">Login</Link></button> : <button><Link to='/signup' className="signup">Signup</Link></button> }
+                </div>
+            )
+        }else{
+            return null;
+        }
+    }
 }
 
-const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
-})
 
-export default connect(null, mDTP)(AuthHeader);
+
+export default withRouter(connect(null)(AuthHeader))
