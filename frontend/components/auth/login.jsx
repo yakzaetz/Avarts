@@ -21,18 +21,35 @@ class Login extends React.Component{
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Email
-                        <input type="text" value={this.state.email} onChange={this.update('email')}/>
-                    </label>
-                    <label>
-                        Password
-                        <input type="password" value={this.state.password} onChange={this.update('password')}/>
-                    </label>
-                    <button type="submit">Login</button>
-                </form>
+            <div className="container">
+                <div className="background-img">
+                    <img src={window.login_componentURL}/>
+                </div>
+                <div className="form-and-stuff">
+                    <div id="top-of-form">
+                        <h1>Log In</h1>
+                    </div>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="bottom-of-form">
+                            <div id="demo-user">
+                                <button type="submit">Demo</button>
+                            </div>
+                            <div id="p-tag">
+                                <p>or log in with email</p>
+                            </div>
+                            <div id="email-input">
+                                <input type="text" value={this.state.email} onChange={this.update('email')} placeholder="Email"/>
+                            </div>
+                            <div id="password-input">
+                                <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password"/>
+                            </div>
+                            <div id="submit-button">
+                                <button type="submit">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
             </div>
         )
     }
