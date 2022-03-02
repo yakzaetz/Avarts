@@ -16,4 +16,5 @@
 
  @import './reset.scss';
  @import './auth_header.scss';
- @import './login.scss'
+ @import './login.scss';
+ @import './signup.scss'

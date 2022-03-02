@@ -8,6 +8,7 @@ class Login extends React.Component{
         this.state = {email: '', password: ''}
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.loginDemoUser = this.loginDemoUser.bind(this)
     }
 
     update(field){
@@ -17,6 +18,14 @@ class Login extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         this.props.login(this.state)
+    }
+
+    loginDemoUser(e){
+        e.preventDefault();
+        this.props.login({
+            'email': 'eric@eric.com',
+            'password': '123123'
+        })
     }
 
     render(){
@@ -32,7 +41,7 @@ class Login extends React.Component{
                     <form onSubmit={this.handleSubmit}>
                         <div className="bottom-of-form">
                             <div id="demo-user">
-                                <button type="submit">Demo</button>
+                                <button type="submit" onClick={this.loginDemoUser}>Demo</button>
                             </div>
                             <div id="p-tag">
                                 <p>or log in with email</p>
