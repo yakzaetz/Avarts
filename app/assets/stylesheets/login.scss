@@ -45,36 +45,6 @@
     height: 100%;
     width: 100%;
     padding: 0.5rem;
-    > #email-input {
-        box-sizing: border-box;
-        border: green 3px solid;
-        padding: 0.5rem;
-    }
-    > #password-input {
-        box-sizing: border-box;
-        border: green 3px solid;
-        padding: 0.5rem;
-        width: 100%;
-    }
-
-    > #submit-button{
-        box-sizing: border-box;
-        border: green 3px solid;
-        padding: 0.5rem;
-        margin: auto;
-        width: 100%;
-        > button {
-            background-color: #fc4c02;
-            border-radius: 4%;
-            width: 100%;
-        }
-    }
-    > #p-tag{
-        box-sizing: border-box;
-        border: green 3px solid;
-        padding: 0.5rem;
-        margin: auto;
-    }
 
     > #demo-user{
         width: 100%;
@@ -88,15 +58,11 @@
             width: 100%;
         }
     }
-
-    input {
-        width: 95%;
-    }
 }
 
 .background-img{
     height: 100%;
-    width: 100%;
+    width: 1000%;
     position: relative;
     box-sizing: border-box;
     > img {

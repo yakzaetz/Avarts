@@ -1,14 +1,15 @@
 import React from "react";
 import { signup } from "../../actions/session_actions";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 class Signup extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = { email: '', password: '', name: '', gender: '', location: '', bithday: '', weight: '' }
-        this.update = this.update.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.update = this.update.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field) {
@@ -18,6 +19,18 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.signup(this.state)
+    }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render() {
@@ -61,6 +74,9 @@ class Signup extends React.Component {
                                 <div id="submit-button">
                                     <button type="submit">Signup</button>
                                 </div>
+                                <div id="errors">
+                                    {this.renderErrors()}
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -70,8 +86,13 @@ class Signup extends React.Component {
     }
 }
 
+const mSTP = ({ errors }) =>({
+    errors: errors.sessionErrors,
+    navLink: <Link to="/login">log in instead</Link>
+})
+
 const mDTP = dispatch => ({
     signup: user => dispatch(signup(user))
 })
 
-export default connect(null, mDTP)(Signup);
+export default connect(mSTP, mDTP)(Signup);
