@@ -1,0 +1,1 @@
+json.extract! activity, :id, :activity_type, :date, :hours, :minutes, :seconds, :distance, :title, :description, :time, :user_id

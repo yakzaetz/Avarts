@@ -6,6 +6,10 @@ class User < ApplicationRecord
   validates :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
+  has_many :routes,
+  class_name: :Route,
+  foreign_key: :user_id
+
   after_initialize :ensure_session_token
 
 

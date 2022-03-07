@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import configureStore from './store/store';
 import Root from './components/root'
 
+import {fetchActivity, fetchActivities} from "./actions/activity_actions"
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     let store;
@@ -18,5 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         store = configureStore();
     }
+    window.fetchActivity = fetchActivity
+    window.fetchActivities = fetchActivities
+    window.dispatch = store.dispatch 
     ReactDOM.render(<Root store={store}/>, root);
 });
