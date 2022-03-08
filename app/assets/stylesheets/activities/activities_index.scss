@@ -1,0 +1,57 @@
+// table tr th {
+//     border: 1px solid #000;
+//     padding: 5px;
+// }
+
+.index-table {
+    border-collapse: collapse;
+    border: orangered 3px solid;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 400px;
+    margin: 25px 0;
+    font-size: 0.9em;
+}
+
+.index-table thead tr {
+    background-color: #f0f0f5;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+}
+
+.index-table th,
+.index-table td {
+    padding: 12px 15px;
+    // background-color: black;
+    font-size: small;
+}
+
+.index-table tbody tr:nth-child(even){
+    background-color: #f1f1f6;
+    color: black;
+}
+
+.index-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.UIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px red solid;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+.h1-table {
+    box-sizing: border-box;
+    border: 3px solid purple;
+    width: 80%;
+}
+
+.UIHeader {
+    font-weight: 550;
+    font-size: 30px;
+}

@@ -40,12 +40,11 @@ class Api::ActivitiesController < ApplicationController
     end 
   end
 
-  def delete 
+  def destroy 
     @activity = Activity.find(params[:id])
 
     if @activity
       @activity.delete
-      render :index
     else
       render json: ['activity not found'], status: 404
     end

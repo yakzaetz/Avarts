@@ -4,11 +4,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchActivities } from "../../actions/activity_actions";
 import { Link } from 'react-router-dom'
-import ActivityIndexItem from "./activity_index_item";
+import DashIndexItem from "./dashboard_index_item";
 
-class UserIndex extends React.Component{
+class UserIndex extends React.Component {
     componentDidMount() {
-        this.props.fetchActivities({currentId: this.props.currentUserId});
+        this.props.fetchActivities();
     }
 
     render() {
@@ -16,22 +16,21 @@ class UserIndex extends React.Component{
             <div>
                 <ul>
                     {
-                        this.props.activities.map(activity => <ActivityIndexItem activity={activity} deleteActivity={this.props.deleteActivity} key={activity.id}/>)
+                        this.props.activities.map(activity => <DashIndexItem activity={activity} deleteActivity={this.props.deleteActivity} key={activity.id} />)
                     }
+                    {/* <Link to={"/activities/new"}>New Activity</Link> */}
                 </ul>
-                <Link to={"/activities/new"}>New Activity</Link>
             </div>
         )
     }
 }
 
 const mSTP = state => ({
-    currentUserId: state.session.id,
     activities: Object.values(state.entities.activities)
 })
 
 const mDTP = dispatch => ({
-    fetchActivities: id => dispatch(fetchActivities(id)),
+    fetchActivities: () => dispatch(fetchActivities()),
     deleteActivity: id => dispatch(deleteActivity(id))
 })
 

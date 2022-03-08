@@ -1,7 +1,7 @@
 .signup-container {
     height: calc(100vh - 30px);
     width: 100vw;   
-    border: solid 5px red; 
+    // border: solid 5px red; 
     position: relative;
     box-sizing: border-box;
 }
@@ -12,7 +12,7 @@
     height: 57%;
     width: 16%;
     box-sizing: border-box;
-    border: brown 3px solid;
+    // border: brown 3px solid;
     display: block;
     position: absolute;
     top: 17%;
@@ -36,7 +36,7 @@
 
 #signup-top-of-form {
         box-sizing: border-box;
-        border: brown 3px solid;
+        // border: brown 3px solid;
         background-color: rgba($color: #000000, $alpha: 1.0);
         color: white;
         height: 20%;
@@ -51,7 +51,7 @@
 
 .signup-bottom-of-form {
     box-sizing: border-box;
-    border: red 3px solid;
+    // border: red 3px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,7 +62,7 @@
 
 #email-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     > input {
         width: 95%;
@@ -70,7 +70,7 @@
 }
 #password-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     > input {
@@ -79,7 +79,7 @@
 }
 #name-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     > input {
@@ -88,7 +88,7 @@
 }
 #gender-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     > input {
@@ -100,7 +100,7 @@
 }
 #location-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     > input {
@@ -109,7 +109,7 @@
 }
 #birthday-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     > input {
@@ -118,7 +118,7 @@
 }
 #weight-input {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     > input {
@@ -127,7 +127,7 @@
 }
 #errors {
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     width: 100%;
     color: #fc4c02;
@@ -135,12 +135,12 @@
 
 #submit-button{
     box-sizing: border-box;
-    border: green 3px solid;
+    // border: green 3px solid;
     padding: 0.5rem;
     margin: auto;
     width: 100%;
     > button {
-        background-color: #fc4c02;
+        // background-color: #fc4c02;
         border-radius: 4%;
         width: 100%;
     }

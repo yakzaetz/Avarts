@@ -1,7 +1,7 @@
 .container {
     height: calc(100vh - 30px);
     width: 100vw;   
-    border: solid 5px red; 
+    // border: solid 5px red; 
     position: relative;
     box-sizing: border-box;
 }
@@ -12,7 +12,7 @@
     height: 45%;
     width: 16%;
     box-sizing: border-box;
-    border: brown 3px solid;
+    // border: brown 3px solid;
     display: block;
     position: absolute;
     top: 5%;
@@ -23,7 +23,7 @@
 
 #top-of-form {
         box-sizing: border-box;
-        border: brown 3px solid;
+        // border: brown 3px solid;
         background-color: rgba($color: #000000, $alpha: 1.0);
         color: white;
         height: 15%;
@@ -38,7 +38,7 @@
 
 .bottom-of-form {
     box-sizing: border-box;
-    border: red 3px solid;
+    // border: red 3px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,11 +49,11 @@
     > #demo-user{
         width: 100%;
         box-sizing: border-box;
-        border: green 3px solid;
+        // border: green 3px solid;
         padding: 0.5rem;
         margin: auto;
         > button {
-            background-color: #fc4c02;
+            // background-color: #fc4c02;
             border-radius: 4%;
             width: 100%;
         }
