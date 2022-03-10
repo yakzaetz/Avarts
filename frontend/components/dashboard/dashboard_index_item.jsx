@@ -45,7 +45,9 @@ const structuredDate = (date, time) => {
 const DashIndexItem = ({ activity, users}) => {
 
     
-    debugger
+    // debugger
+    console.log(users)
+    console.log(activity)
     return (
         <div className="index-item">
             <div className="information">

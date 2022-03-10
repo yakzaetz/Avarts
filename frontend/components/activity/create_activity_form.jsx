@@ -44,40 +44,47 @@ class CreateActivityForm extends React.Component {
             <div className="new-activity-container">
                 <div className="new-activity-form">
                     <form onSubmit={this.handleSubmit}>
-                        <div><h1>Manual Entry</h1></div>
-                        <div className="top-of-create-form">
-                            <div id="create-distance">
-                                <p>Distance</p>
-                                <input type="number" onChange={this.update('distance')}/> miles
-                            </div>
-                            <div id="create-duration">
-                                <p>Duration</p>
-                                <input type="number" placeholder="hr" onChange={this.update('hours')}/>
-                                <input type="number" placeholder="min" onChange={this.update('minutes')}/>
-                                <input type="number" placeholder="s" onChange={this.update('seconds')}/>
+                        <div className="top-general-section-of-create-form">
+                            <div><h1>Manual Entry</h1></div>
+                            <div className="top-of-create-form">
+                                <div id="create-distance">
+                                    <p>Distance</p>
+                                    <input type="number" onChange={this.update('distance')}/> miles
+                                </div>
+                                <div id="create-duration">
+                                    <p>Duration</p>
+                                    <input type="number" placeholder="hr" onChange={this.update('hours')}/>
+                                    <input type="number" placeholder="min" onChange={this.update('minutes')}/>
+                                    <input type="number" placeholder="s" onChange={this.update('seconds')}/>
+                                </div>
                             </div>
                         </div>
                         <div className="middle-of-create-form">
-                            <div id="sport">
-                                <p>Sport</p>
-                                <select onSelect={this.update('activity_type')}>
-                                    <option value="">Run</option>
-                                    <option value="">Bike</option>
-                                    <option value="">Walk</option>
-                                </select>
-                            </div>
-                            <div className="date-and-time">
-                                <div id="date">
-                                    <p>Date & Time</p>
-                                    <input type="date" onChange={this.update('date')} />
+                            <div className="sport-date-time">
+                                <div id="sport">
+                                    <p>Sport</p>
+                                    <select onSelect={this.update('activity_type')}>
+                                        <option value="">Run</option>
+                                        <option value="">Bike</option>
+                                        <option value="">Walk</option>
+                                    </select>
                                 </div>
-                                <div id="time">
-                                    <p>Time</p>
-                                    <input type="time" onChange={this.update('time')}/>
+                                <div className="date-and-time">
+                                    <div id="date">
+                                        <p>Date & Time</p>
+                                        <input type="date" onChange={this.update('date')} />
+                                    </div>
+                                    <div id="time">
+                                        <p>Time</p>
+                                        <input type="time" onChange={this.update('time')}/>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="title-container">
                             <div id="title">
-                                <input type="text" placeholder="Afternoon run" onChange={this.update('title')}/>
+                                    <p>Title</p>
+                                    <input type="text" placeholder="Afternoon run" onChange={this.update('title')}/>
                             </div>
                         </div>
                         <button type="submit">Create Activity</button>

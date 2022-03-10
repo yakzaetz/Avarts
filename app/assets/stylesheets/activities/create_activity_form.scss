@@ -1,5 +1,5 @@
 .new-activity-container {
-    border: 2px solid rgb(214, 76, 76);
+    // border: 2px solid rgb(214, 76, 76);
     box-sizing: border-box;
     height: calc(100vh - 55px);
     width: 100vw;
@@ -12,38 +12,92 @@
     }
 }
 
+.top-general-section-of-create-form {
+    // border: 2px solid rgb(103, 119, 9);
+    box-sizing: border-box;
+    margin-top: 5%;
+    height: 10%;
+    border-bottom: whitesmoke 1px solid;
+}
+
 .new-activity-form {
-    border: 2px solid rgb(214, 76, 76);
+    // border: 2px solid rgb(214, 76, 76);
     box-sizing: border-box;
     height: calc(100vh - 55px);
     width: 50%;
 }
 
 .top-of-create-form{
-    border: 2px solid rgb(214, 76, 76);
+    // border: 2px solid rgb(214, 76, 76);
     box-sizing: border-box;
-    display: flex;
     margin: 1%;
+    display: flex;
+    justify-content: space-between;
+    > input {
+        width: 100px;
+    }
+}
+
+#create-distance {
+    box-sizing: border-box;
+    // border: 2px solid rgb(13, 135, 156);
+}
+#create-duration {
+    box-sizing: border-box;
+    // border: 2px solid rgb(83, 39, 134);
 }
 
 .middle-of-create-form {
-    border: 2px solid rgb(214, 76, 76);
+    // border: 2px solid #f3f640;
     box-sizing: border-box;
+    height: 35%;
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
 
     .date-and-time {
-        border: 2px solid rgb(214, 76, 76);
+        // border: 2px solid rgb(43, 245, 24);
         box-sizing: border-box;
         display: flex;
     }
 
     #sport {
         margin-right: 1%;
+        // border: 2px solid rgb(6, 94, 105);
+        box-sizing: border-box;
+        width: 75px;
     }
     #time{
-        > p {
-            color: white;
-        }
+        color: black;
     }
+}
+
+.title-container {
+    box-sizing: border-box;
+    width: 100%;
+    // margin: 1%;
+    // border: 2px solid rgb(42, 6, 139);
+}
+
+#title {
+    margin: 1%;
+    // border: 2px solid rgb(205, 150, 250);
+    display: flex;
+    flex-direction: column;
+    > input {
+        width: 50%;
+    }
+    > p {
+        font-size: 14px;
+        font-weight: normal;
+        font-family: Poppins, sans-serif;
+    } 
+}
+
+.sport-date-time {
+    margin-right: 1%;
+    // border: 2px solid rgb(238, 8, 8);
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 1%;
 }
