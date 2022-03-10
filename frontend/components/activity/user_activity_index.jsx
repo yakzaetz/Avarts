@@ -12,11 +12,11 @@ class UserIndex extends React.Component{
     }
 
     render() {
-        // debugger
         return (
             <div className="UIndex">
                 <div className="h1-table">
                     <h1 className="UIHeader">My Activities</h1>
+                    <p className="activity-count">{`${this.props.activities.length} Activities`}</p>
                     <table className="index-table">
                         <thead>
                             <tr>

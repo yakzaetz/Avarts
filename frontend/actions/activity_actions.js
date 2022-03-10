@@ -28,17 +28,17 @@ export const fetchActivities = data => dispatch => (
 
 export const fetchActivity = (activityId) => dispatch => (
     ActivityAPIUtil.fetchActivity(activityId)
-        .then((fetchedActivity, user) => dispatch(receiveActivity(fetchedActivity, user)))
+        .then(({activity, user}) => dispatch(receiveActivity(activity, user)))
 )
 
 export const createActivity = activity => dispatch => (
     ActivityAPIUtil.createActivity(activity)
-        .then((recActivity, user) => dispatch(receiveActivity(recActivity, user)))
+        .then(({activity, user}) => dispatch(receiveActivity(activity, user)))
 )
 
 export const updateActivity = activity => dispatch => (
     ActivityAPIUtil.updateActivity(activity)
-        .then((recActivity, user) => dispatch(receiveActivity(recActivity, user)))
+        .then(({activity, user}) => dispatch(receiveActivity(activity, user)))
 )
 
 export const deleteActivity = (activityId) => dispatch => (

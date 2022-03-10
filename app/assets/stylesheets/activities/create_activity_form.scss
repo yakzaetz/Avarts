@@ -1,0 +1,49 @@
+.new-activity-container {
+    border: 2px solid rgb(214, 76, 76);
+    box-sizing: border-box;
+    height: calc(100vh - 55px);
+    width: 100vw;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+.new-activity-form {
+    border: 2px solid rgb(214, 76, 76);
+    box-sizing: border-box;
+    height: calc(100vh - 55px);
+    width: 50%;
+}
+
+.top-of-create-form{
+    border: 2px solid rgb(214, 76, 76);
+    box-sizing: border-box;
+    display: flex;
+    margin: 1%;
+}
+
+.middle-of-create-form {
+    border: 2px solid rgb(214, 76, 76);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+
+    .date-and-time {
+        border: 2px solid rgb(214, 76, 76);
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    #sport {
+        margin-right: 1%;
+    }
+    #time{
+        > p {
+            color: white;
+        }
+    }
+}
