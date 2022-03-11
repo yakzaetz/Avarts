@@ -24,7 +24,7 @@ class Splash extends React.Component {
     loginDemoUser(e) {
         e.preventDefault();
         this.props.login({
-            'email': 'eric@eric.com',
+            'email': 'eric@avarts.com',
             'password': '123123'
         })
     }
