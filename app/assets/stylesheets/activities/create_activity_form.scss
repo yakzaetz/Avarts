@@ -1,11 +1,11 @@
 .new-activity-container {
-    // border: 2px solid rgb(214, 76, 76);
+    border: 2px solid rgb(214, 76, 76);
     box-sizing: border-box;
     height: calc(100vh - 55px);
     width: 100vw;
     margin-top: 1%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     h1 {
         font-size: 28px;
         font-weight: bold;
@@ -13,7 +13,7 @@
 }
 
 .top-general-section-of-create-form {
-    // border: 2px solid rgb(103, 119, 9);
+    border: 2px solid rgb(103, 119, 9);
     box-sizing: border-box;
     margin-top: 5%;
     height: 10%;
@@ -21,14 +21,14 @@
 }
 
 .new-activity-form {
-    // border: 2px solid rgb(214, 76, 76);
+    border: 2px solid rgb(214, 76, 76);
     box-sizing: border-box;
     height: calc(100vh - 55px);
-    width: 50%;
+    width: 20%;
 }
 
 .top-of-create-form{
-    // border: 2px solid rgb(214, 76, 76);
+    border: 2px solid rgb(214, 76, 76);
     box-sizing: border-box;
     margin: 1%;
     display: flex;
@@ -40,29 +40,29 @@
 
 #create-distance {
     box-sizing: border-box;
-    // border: 2px solid rgb(13, 135, 156);
+    border: 2px solid rgb(13, 135, 156);
 }
 #create-duration {
     box-sizing: border-box;
-    // border: 2px solid rgb(83, 39, 134);
+    border: 2px solid rgb(83, 39, 134);
 }
 
 .middle-of-create-form {
-    // border: 2px solid #f3f640;
+    border: 2px solid #f3f640;
     box-sizing: border-box;
     height: 35%;
     display: flex;
     // justify-content: space-around;
 
     .date-and-time {
-        // border: 2px solid rgb(43, 245, 24);
+        border: 2px solid rgb(43, 245, 24);
         box-sizing: border-box;
         display: flex;
     }
 
     #sport {
         margin-right: 1%;
-        // border: 2px solid rgb(6, 94, 105);
+        border: 2px solid rgb(6, 94, 105);
         box-sizing: border-box;
         width: 75px;
     }
@@ -75,12 +75,12 @@
     box-sizing: border-box;
     width: 100%;
     // margin: 1%;
-    // border: 2px solid rgb(42, 6, 139);
+    border: 2px solid rgb(42, 6, 139);
 }
 
 #title {
     margin: 1%;
-    // border: 2px solid rgb(205, 150, 250);
+    border: 2px solid rgb(205, 150, 250);
     display: flex;
     flex-direction: column;
     > input {
@@ -95,7 +95,7 @@
 
 .sport-date-time {
     margin-right: 1%;
-    // border: 2px solid rgb(238, 8, 8);
+    border: 2px solid rgb(238, 8, 8);
     display: flex;
     justify-content: space-between;
     width: 50%;
